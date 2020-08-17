@@ -45,19 +45,21 @@ const EditStory = ({ story: { _id, title, description } }) => {
                     <input type="text" name='title' ref={register({
                         required: 'Required'
                     })} />
-                    <label htmlFor="title">Title</label>
+                    <label htmlFor="title"></label>
                     {errors.title ? <span className="red-text helper-text">
                         {errors.title.message}
-                    </span> : null}
+                    </span> : <span className='helper-text'>
+                            Title</span>}
                 </div>
                 <div className="input-field">
                     <input type="text" name='description' ref={register({
                         required: 'Required'
                     })} />
-                    <label htmlFor="description">Description</label>
+                    <label htmlFor="description"></label>
                     {errors.description ? <span className="red-text helper-text">
                         {errors.description.message}
-                    </span> : null}
+                    </span> : <span className='helper-text'>
+                            Description</span>}
                 </div>
                 <div className="input-field">
                     <button disabled={submitting} type="submit" className='btn red'>

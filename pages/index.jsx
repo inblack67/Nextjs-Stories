@@ -6,16 +6,16 @@ const Home = ({ stories }) => {
 
   return (
     <div className='container'>
-      <h1>Stories</h1>
+      <h3>Stories</h3>
       <ul className='collection'>
         {stories.map(story => <li className='collection-item' key={story._id}>
-          <Link href={`/${story._id}`}>
+          <Link as={`/${story._id}`} href='/[id]'>
             <a>
               {story.title}
             </a>
           </Link>
-          <Link href={`/${story._id}/edit`}>
-            <a className="secondary-content red-text">
+          <Link as={`/${story._id}/edit`} href='/[id]/edit'>
+            <a className="secondary-content green-text">
               <i className="material-icons">edit</i>
             </a></Link>
         </li>)}
