@@ -11,10 +11,10 @@ const Navbar = () => {
                         </a>
                     </Link>
                     <ul className="right">
-                        <li>
-                            <Link href='/about'>
+                        <li className='hide-on-small-only'>
+                            <Link href='/'>
                                 <a>
-                                    About
+                                    Home
                                 </a>
                             </Link>
                         </li>
@@ -22,6 +22,13 @@ const Navbar = () => {
                             <Link href='/add-story'>
                                 <a>
                                     Add Story
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/about'>
+                                <a>
+                                    About
                                 </a>
                             </Link>
                         </li>

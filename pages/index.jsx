@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from 'axios'
 import Link from 'next/link'
 
@@ -14,6 +13,10 @@ const Home = ({ stories }) => {
               {story.title}
             </a>
           </Link>
+          <Link href={`/${story._id}/edit`}>
+            <a className="secondary-content red-text">
+              <i className="material-icons">edit</i>
+            </a></Link>
         </li>)}
       </ul>
     </div>

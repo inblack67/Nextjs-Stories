@@ -1,4 +1,3 @@
-import 'materialize-css/dist/css/materialize.min.css';
 import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {

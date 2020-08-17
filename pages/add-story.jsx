@@ -1,8 +1,11 @@
-import React, { createRef, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
 const AddStory = () => {
+
+    const router = useRouter();
 
     const [submitting, setSubmitting] = useState(false);
 
@@ -28,6 +31,8 @@ const AddStory = () => {
                     const res = await axios.post('http://localhost:3000/api/stories', formData, config);
 
                     console.log(`story added`);
+
+                    router.push('/');
 
                 } catch (err) {
                     console.error(err)
