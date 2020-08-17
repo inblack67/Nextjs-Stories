@@ -27,7 +27,7 @@ const AddStory = () => {
                     }
                     const res = await axios.post('http://localhost:3000/api/stories', formData, config);
 
-                    console.log(res.data);
+                    console.log(`story added`);
 
                 } catch (err) {
                     console.error(err)

@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Link from 'next/link'
 
 const Home = ({ stories }) => {
 
@@ -8,7 +9,11 @@ const Home = ({ stories }) => {
       <h1>Stories</h1>
       <ul className='collection'>
         {stories.map(story => <li className='collection-item' key={story._id}>
-          {story.title}
+          <Link href={`/${story._id}`}>
+            <a>
+              {story.title}
+            </a>
+          </Link>
         </li>)}
       </ul>
     </div>
