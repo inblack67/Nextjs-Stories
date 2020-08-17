@@ -10,12 +10,7 @@ const AddStory = () => {
 
     const [submitting, setSubmitting] = useState(false);
 
-    const { handleSubmit, errors, register } = useForm({
-        defaultValues: {
-            title: "lost angels",
-            description: "dtb"
-        }
-    });
+    const { handleSubmit, errors, register } = useForm();
 
     return (
         <div className='container'>
