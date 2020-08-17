@@ -25,7 +25,7 @@ const Navbar = () => {
                                 </a>
                             </Link>
                         </li>
-                        <li>
+                        <li className='hide-on-small-only'>
                             <Link href='/about'>
                                 <a>
                                     About
