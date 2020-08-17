@@ -29,7 +29,7 @@ const EditStory = ({ story: { _id, title, description } }) => {
                             'Content-Type': 'application/json'
                         }
                     }
-                    const res = await axios.put(`${process.env.NEXT_PUBLIC_API_END}/api/stories/${_id}`, formData, config);
+                    const res = await axios.put(`${process.env.NEXT_PUBLIC_API_END || process.env.API_END}/api/stories/${_id}`, formData, config);
                     console.log(`story updated`);
 
                     router.push('/');
