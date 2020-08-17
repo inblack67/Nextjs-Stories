@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Link from 'next/link'
+import { server } from '../utils/server'
 
 const Home = ({ stories }) => {
 
@@ -24,7 +25,7 @@ const Home = ({ stories }) => {
 }
 
 Home.getInitialProps = async () => {
-  const res = await axios(`${process.env.NEXT_PUBLIC_API_END || process.env.API_END}/api/stories`);
+  const res = await axios(`${server}/api/stories`);
   return { stories: res.data.data };
 }
 

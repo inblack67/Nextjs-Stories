@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import { server } from '../utils/server'
 
 const AddStory = () => {
 
@@ -28,7 +29,7 @@ const AddStory = () => {
                             'Content-Type': 'application/json'
                         }
                     }
-                    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_END || process.env.API_END}/api/stories`, formData, config);
+                    const res = await axios.post(`${server}/api/stories`, formData, config);
 
                     console.log(`story added`);
 

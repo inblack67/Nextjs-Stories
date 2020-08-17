@@ -1,13 +1,14 @@
 import React from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import { server } from '../../utils/server'
 
 const SingleStory = ({ story: { title, description, _id } }) => {
     const router = useRouter();
 
     const onDelete = async e => {
         try {
-            await axios.delete(`${process.env.NEXT_PUBLIC_API_END || process.env.API_END}/api/stories/${_id}`);
+            await axios.delete(`${server}/api/stories/${_id}`);
             console.log('story deleted');
             router.push('/');
         } catch (err) {
