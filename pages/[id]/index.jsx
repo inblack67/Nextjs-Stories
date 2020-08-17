@@ -7,7 +7,7 @@ const SingleStory = ({ story: { title, description, _id } }) => {
 
     const onDelete = async e => {
         try {
-            await axios.delete(`http://localhost:3000/api/stories/${_id}`);
+            await axios.delete(`${process.env.NEXT_PUBLIC_API_END}/api/stories/${_id}`);
             console.log('story deleted');
             router.push('/');
         } catch (err) {

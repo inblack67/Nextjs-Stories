@@ -28,7 +28,7 @@ const AddStory = () => {
                             'Content-Type': 'application/json'
                         }
                     }
-                    const res = await axios.post('http://localhost:3000/api/stories', formData, config);
+                    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_END}/api/stories`, formData, config);
 
                     console.log(`story added`);
 

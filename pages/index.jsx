@@ -24,7 +24,7 @@ const Home = ({ stories }) => {
 }
 
 Home.getInitialProps = async () => {
-  const res = await axios('http://localhost:3000/api/stories');
+  const res = await axios(`${process.env.NEXT_PUBLIC_API_END}/api/stories`);
   return { stories: res.data.data };
 }
 

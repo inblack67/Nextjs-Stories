@@ -11,7 +11,7 @@ const Navbar = () => {
                         </a>
                     </Link>
                     <ul className="right">
-                        <li className='hide-on-small-only'>
+                        <li className='hide-on-med-and-down'>
                             <Link href='/'>
                                 <a>
                                     Home
